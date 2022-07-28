@@ -1,0 +1,52 @@
+@import "./../../index.scss";
+
+.login__container {
+  background: #4641d9;
+  border-radius: 16px;
+  width: 658px;
+  height: auto;
+  padding: 80px;
+
+  h2 {
+    color: #ffffff;
+    height: 64px;
+    width: 616px;
+    left: 104px;
+    top: 272px;
+    border-radius: nullpx;
+    margin-bottom: 51px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+
+    label {
+      color: #ffffff;
+      height: 24px;
+      width: 69px;
+      left: 104px;
+      top: 499px;
+      border-radius: nullpx;
+    }
+
+    input {
+      height: 56px;
+      width: 510px;
+      left: 104px;
+      top: 539px;
+      border-radius: 8px;
+      
+    }
+
+    button {
+      height: 56px;
+      width: 145px;
+      border-radius: 8px;
+      padding: 16px, 48px, 16px, 48px;
+      margin-top: 56px;
+    }
+
+  }
+}

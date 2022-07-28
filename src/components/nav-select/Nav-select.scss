@@ -1,0 +1,71 @@
+@import "/src/scss-common/responsive";
+@import "/src/index";
+
+.manager {
+  display: none;
+}
+.nav-select {
+  background-color: #e2e2e3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include mobile-min {
+      flex-direction: row;
+    }
+  }
+
+  &__title {
+    width: 360px;
+    font-weight: $weight-regular;
+    font-size: 24px;
+    color: $color-primary;
+    margin-top: 0;
+    margin-bottom: 48px;
+  }
+
+  &__link {
+    border: 2px solid $color-primary;
+    border-radius: 8px;
+    width: 274px;
+    height: 132px;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.15s;
+
+    &:hover, &--active {
+      background-color: $color-primary;
+      color: $color-white;
+
+      .nav-select {
+        &__icon {
+          path {
+            fill: $color-accent;
+          }
+        }
+      }
+    }
+  }
+
+  &__text {
+    font-weight: $weight-extraBold;
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+  }
+
+  &__icon {
+    margin: 0 auto;
+    width: 58px;
+  }
+}

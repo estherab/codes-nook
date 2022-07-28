@@ -1,0 +1,32 @@
+// =============================================================================
+// _colors.scss : Colors for Project
+// MIT License
+// =============================================================================
+
+// =============================================================================
+// _colors.scss settings
+// =============================================================================
+
+//Colors
+$color-primary: #4641D9;
+$color-accent: #1ED9C6;
+$color-grey: #6C7073;
+$color-black: #0B0C0D;
+$color-white: #fff;
+
+// Weight tipo
+$weight-regular: 400;
+$weight-bold: 700;
+$weight-extraBold: 800;
+
+//Space
+$spacers: spToRem(4) !default;
+$spacers-s: ($spacers) + rem;
+$spacers-m: ($spacers * 2) + rem;
+$spacers-l: ($spacers * 4) + rem;
+$spacers-xl: ($spacers * 6) + rem;
+$spacers-xxl: ($spacers * 8) + rem;
+
+$spacers-container-l: ($spacers * 12) + rem;
+$spacers-container-xl: ($spacers * 24) + rem;
+$spacers-container-xxl: ($spacers * 32) + rem;

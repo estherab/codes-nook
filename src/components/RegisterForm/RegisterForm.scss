@@ -1,0 +1,68 @@
+@import "./../../index.scss";
+
+.register__container {
+  width: 658px;
+  height: 672px;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    margin-bottom: 54px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 64px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    .fields {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 56px;
+      gap: 22.74px;
+
+      &__left {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__right {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    label {
+      height: 24px;
+      width: 78px;
+      left: 768px;
+      top: 387px;
+      border-radius: nullpx;
+      margin-bottom: 16px;
+    }
+
+    input {
+      height: 56px;
+      width: 500px;
+      left: 768px;
+      top: 427px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+
+    button {
+      height: 56px;
+      width: 169px;
+      left: 768px;
+      top: 651px;
+      border-radius: 8px;
+      padding: 16px, 48px, 16px, 48px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import "/src/index.scss";
+
+a img:hover {
+    opacity: .6;
+}
+
+.footer {
+    @include base-flex(flex, space-between, center);
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: $spacers-xxl $spacers-l;
+    border-top: 2px solid $color-primary;
+
+
+    &__logo {
+        width: 100%;
+        max-width: 300px;
+    }
+}

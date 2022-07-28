@@ -1,0 +1,148 @@
+@import "/src/index.scss";
+
+.timer {
+    @include base-flex(flex, center, center);
+    gap: 60px;
+    position: absolute;
+    top: 50%;    
+    left: 50%;
+    transform: translate(-50%,-50%);    
+
+    &__wrapper {
+        position: relative;
+        @include base-flex(flex, strech, strech);
+        flex-direction: column;
+
+        &:not(:last-child):after{
+            content: ':';
+            @include base-size(20);
+            font-weight: $weight-extraBold;
+            position: absolute;
+            right: -30px;
+            top: 30px;
+            color: $color-white;
+        }
+    }
+    &__number {
+        display: inline-block;
+        color: $color-white;
+    }
+    &__name {
+        @include base-size(28);
+        color: $color-accent;
+        text-transform: uppercase;
+    }
+}
+
+.upload-form {
+    @include base-flex(flex, center, center);
+    flex-direction: column;
+    &__wrapper {
+        margin-bottom: $spacers-xl;
+    }
+    &__label {
+        display: inline-block;
+        color: $color-white;
+        margin-bottom: $spacers-l;
+    }
+    &__input {
+        width: 100%;
+        height: 40px;
+        padding: $spacers-m $spacers-l;
+        border: 0;
+        border-radius: $spacers-m;
+
+    }
+    button {
+        margin-top: $spacers-l;
+    }
+}
+
+.toRate {
+    &__info {
+        @include mobile-min {
+            @include base-size(14);
+        }
+        @include mobile-max {
+            @include base-size(12);
+            flex-direction: column;
+        }
+        @include base-flex(flex, stretch, stretch);
+        gap: $spacers-m;
+
+        & ul {
+            column-count: 2;
+            column-gap: $spacers-xxl;
+            @include mobile-min {
+                
+            }
+        }
+
+        & li {
+            list-style-type: square;
+            margin-bottom: $spacers-m;
+        }
+        
+    }
+    &__title {
+        position: absolute;
+        width: 100%;
+        top: 50%;    
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        color: $color-accent;
+    }
+
+    &__form-intro {
+        color: $color-accent;
+        width: 100%;
+        text-align: center;
+    }
+    &__score {
+        @include base-flex(inline-flex, center, center);
+        cursor: pointer;
+        line-height: 0;
+        margin: $spacers-m;
+        height: 80px;
+        aspect-ratio: 1/1;
+        border: 2px solid $color-accent;
+        border-radius: $spacers-l;
+        margin-bottom: $spacers-xxl;
+
+        &:hover {
+            color: $color-accent;
+        }
+        &--active {
+            color: $color-accent;
+            cursor: initial;
+        }
+    }
+}
+
+.result {
+    &__intro {
+        width: 100%;
+        text-align: center;
+        @include base-size(24);
+    }
+    &__title {
+        color: $color-white;
+        width: 100%;
+        text-align: center;
+    }
+    &__link {
+        color: $color-accent;
+        margin: $spacers-l;
+        &:hover {
+            color: rgba( $color-accent, .6 );
+        }
+        &:after {
+            background: url("../../../../public/assets/arrow-right-green.svg");
+        }
+    }
+}
+
+.button__primary-end {
+    margin-top: auto;
+}

@@ -1,0 +1,36 @@
+/*Convertion Ration sp to rem for html */
+$conversionRatioSpToRemWeb: 1/16; //! 0.0625;
+$conversionRatioRemToPxWeb: 16;
+// Scales
+@function spToRem($sps) {
+  @return $sps * $conversionRatioSpToRemWeb;
+}
+@function remToPx($rems) {
+  @return $rems * $conversionRatioRemToPxWeb;
+}
+@function spacing($tracking, $px) {
+  @return $tracking / $px;
+}
+
+@mixin base-typo($size, $weight, $spacing) {
+  font-weight: $weight;
+  font-size: #{spToRem($size)}rem;
+  letter-spacing: #{spacing($spacing, remToPx($size))}px;
+}
+
+@mixin base-size($size) {
+  font-size: #{spToRem($size)}rem;
+}
+
+@mixin base-flex($display: flex, $justify: stretch, $align: stretch, $direction: row) {
+  display: $display;
+  @if $align != 'stretch' {
+    align-items: $align;
+  }
+  @if $justify != 'stretch' {
+    justify-content: $justify;
+  }
+  @if $direction != 'row' {
+    flex-direction: $direction;
+  }
+}

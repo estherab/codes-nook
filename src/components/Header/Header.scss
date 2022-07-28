@@ -1,0 +1,52 @@
+@import "./../../index.scss";
+
+nav {
+  margin: 40px 104px 40px 104px;
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  li {
+    font-size: 18px;
+    white-space: nowrap;
+
+    a {
+      color: black;
+      height: 24px;
+      width: 54px;
+      left: 1008px;
+      top: 48px;
+      border-radius: nullpx;
+    }
+  }
+
+  .items__center {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  .items__right {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+  }
+
+  img {
+    height: 42px;
+    width: 246px;
+    left: 151.353515625px;
+    top: 40px;
+    border-radius: nullpx;
+  }
+
+  button {
+    border-radius: 5px;
+  }
+}

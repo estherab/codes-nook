@@ -1,0 +1,40 @@
+@import "/src/index.scss";
+
+.col-50 {
+    @include mobile-min {
+        width: 45%;
+    }
+    @include mobile-max {
+        width: 100%;
+    }
+}
+
+.challengeDetail {
+    @include base-flex(flex, stretch, stretch);
+    gap: 5%;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    margin: $spacers-container-xl auto;
+    padding-left: $spacers-l;
+    padding-right: $spacers-l;
+
+    &__requeriments {
+        column-count: 2;
+    }
+    &__requeriment {
+        list-style-type: square;
+        margin-bottom: $spacers-m;
+        column-gap: $spacers-m;
+    }
+    &__form {
+        color: $color-white;
+        position: relative;
+        min-height: 40vh;
+        @include base-flex(flex, space-between, center);
+        flex-direction: column;
+        background-color: $color-primary;
+        border-radius: $spacers-l;
+        padding: $spacers-container-l $spacers-xl;
+    }
+}

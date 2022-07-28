@@ -1,0 +1,80 @@
+html {
+    font-family: 'Syne', sans-serif;
+    color: $color-primary;
+    font-weight: $weight-regular;
+}
+
+button {
+    text-decoration: none;
+    cursor: pointer;
+    appearance: none;
+    border: 1px solid $color-accent;
+    padding: $spacers-m $spacers-l;
+}
+
+.button {
+    &__primary {
+        background-color: $color-accent;
+
+        &:hover {
+            background-color: rgba( $color-accent, .6 );
+        }
+    }
+    &__secondary {
+        &:hover {
+            border-color: rgba( $color-accent, .6 );
+        }
+    }
+}
+
+.link-post {
+    &::after {
+        content: '';
+        display: inline-block;
+        background: url("../../public/assets/arrow-right-blue.svg");
+        // background: url("../../public/assets/arrow-right-green.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 0.9rem;
+        height: 0.9rem;
+        margin-left: 0.5rem;
+    }
+}
+
+h1, h2, h3, h4 {
+  font-weight: $weight-bold;
+  color: $color-black;
+}
+
+h1 {
+    @include base-size(48);
+}
+h2 {
+    @include base-size(24);
+}
+
+.display {
+    &__01 {
+        @include base-size(55);
+        font-weight: $weight-extraBold;
+        text-transform: uppercase;
+    }
+    &__02 {
+        @include base-size(24);
+        font-weight: $weight-extraBold;
+        text-transform: uppercase;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $color-primary;
+
+    &:hover {
+        color: rgba( $color-primary, .6 );
+
+        &::after {
+            opacity: .6;
+        }
+    }
+}

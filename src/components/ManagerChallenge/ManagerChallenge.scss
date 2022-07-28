@@ -1,0 +1,105 @@
+@import "./../../index.scss";
+
+.challenge__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: auto;
+  left: 456px;
+  top: 170px;
+
+  h1 {
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      height: 24px;
+      width: 100%;
+      left: 456px;
+      top: 312px;
+      border-radius: nullpx;
+      margin-bottom: 16px;
+      color: black;
+    }
+
+    input, select {
+      height: 56px;
+      width: 266.5px;
+      left: 456px;
+      top: 352px;
+      border-radius: 8px;
+      border: 2px solid #4641D9;
+    }
+
+    .top {
+      display: flex;
+      flex-direction: row;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      &__name {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20.73px;
+      }
+
+      &__category {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .mid {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0px;
+      margin-bottom: 20px;
+
+      input, select {
+        height: 56px;
+        width: 563px;
+        left: 459px;
+        top: 463px;
+        border-radius: 8px;
+      }
+    }
+
+    .bottom {
+      display: flex;
+      flex-direction: column;
+
+      textarea {
+        height: 136px;
+        width: 568px;
+        left: 456px;
+        top: 583px;
+        border-radius: 8px;
+        border: 2px solid #4641D9
+      }
+    }
+
+    .button__container {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      margin-top: 25px;
+      margin-bottom: 112px;
+
+      button {
+        height: 56px;
+        width: 160px;
+        left: 862px;
+        top: 744px;
+        border-radius: 8px;
+        padding: 16px, 48px, 16px, 48px;
+      }
+    }
+  }
+}
