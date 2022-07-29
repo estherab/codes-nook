@@ -9,13 +9,20 @@ import { postDetail } from "../../redux/post/post.actions";
 
 const compareDates = (date1, date2) => {
   let minor = false;
+  date1 = date1.split("/");
+  date2 = date2.split("/");
+  console.log(date1, date2);
 
-  if (date1.substring(3, 5) < date2.substring(3, 5)) minor = true;
-  else if (
-    date1.substring(3, 5) === date2.substring(3, 5) &&
-    date1.substring(0, 2) < date2.substring(0, 2)
-  )
+  if (Number(date1[1]) < Number(date2[1])) {
     minor = true;
+    console.log("1");
+  } else if (
+    Number(date1[1]) === Number(date2[1]) &&
+    Number(date1[0]) < Number(date2[0])
+  ) {
+    minor = true;
+    console.log("2");
+  }
 
   return minor;
 };
@@ -74,7 +81,7 @@ const ChallengesList = ({ language }) => {
   return (
     <>
       <h1 className='challenges-title'>May the force be with you</h1>
-      <div className='current'>
+      { currentChallenge.title && <div className='current'>
         <div className='current__time'>
           <p className='accent'>Quedan</p>
           <p className='current__time-diference'>{difference}</p>
@@ -98,7 +105,7 @@ const ChallengesList = ({ language }) => {
             <p>Log in to access</p>
           }
         </div>
-      </div>
+      </div> }
 
       <div className='challenges-container'>
         {newCategory
