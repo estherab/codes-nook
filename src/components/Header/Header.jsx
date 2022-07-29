@@ -1,4 +1,3 @@
-import logo from "./../../logo.svg";
 import { Link } from "react-router-dom";
 import { logoutUser } from "../../redux/users/auth.actions";
 import { useDispatch, useSelector } from "react-redux";
@@ -10,16 +9,23 @@ const Header = () => {
   const user = useSelector((state) => state.auth.user);
 
   const logout = () => {
-    API.post('users/logout').then((res) => {
+    API.post("users/logout").then((res) => {
       dispatch(logoutUser(res));
-    })
-  }
+    });
+  };
 
   return (
     <>
       <nav>
         <ul>
-          <img src={logo} alt='logo' />
+          <Link to='/'>
+            <img
+              className='footer__logo'
+              width='300px'
+              src='/assets/codes_nook_logo.svg'
+              alt="logotipo codes' nook"
+            />
+          </Link>
 
           <div className='items__center'>
             <li>
@@ -40,20 +46,19 @@ const Header = () => {
           </div>
 
           <div className='items__right'>
-            { !user &&
+            {!user && (
               <Link to='/auth'>
                 <button>Login</button>
               </Link>
-            }
-            { user &&
-            <>
-              <li>
-                <Link to='/manager'>Manager</Link>
-              </li>
-              <button onClick={logout}>Logout</button>
-            </>
-            }
-
+            )}
+            {user && (
+              <>
+                <li>
+                  <Link to='/manager'>Manager</Link>
+                </li>
+                <button onClick={logout}>Logout</button>
+              </>
+            )}
           </div>
         </ul>
       </nav>

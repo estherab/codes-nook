@@ -19,7 +19,7 @@ const ResourcesList = ({ language }) => {
 
   return (
     <>
-      <h1 className='resources-title'>My precious... sources</h1>
+      <h1 className='resources-title'>My precious... resources</h1>
 
       <div className='resources-container'>
         {newCategory.map((item, index) => {
